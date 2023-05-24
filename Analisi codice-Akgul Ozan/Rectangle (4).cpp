@@ -50,7 +50,7 @@ Rectangle::~Rectangle()
 /// @brief copy construnctor
 /// @param r 
 /// @return pointer
-Rectangle& Rectangle::operator=(const Rectangle& r) 
+Rectangle& Rectangle::operator=(const Rectangle& r)
 {
 cout << "Rectangle - operator =" << endl;
 return *this;

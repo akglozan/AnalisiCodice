@@ -82,6 +82,15 @@ int main()
     e.ErrorMessage("test error message\n\n");
 
 
+    Rectangle recA(2, 4);
+    Rectangle recB(recA);
+    Rectangle recC;
+
+    recA.Init();//Init functions works but wastes computing power by redoing what reset did
+  
+    recA.Dump();
+
+
 
 
 
