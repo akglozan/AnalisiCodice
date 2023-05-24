@@ -26,55 +26,60 @@ int main()
     IsoTrapezoid e(6,3);//another object for testing 
     e.Dump();
 
-   
+
+    cout << "Init(const polygon &p) func test" << endl;
+    c.Init(a);
+    c.Dump();//init(const polygon &p) works
+
+
+    cout << "Init func test" << endl;
+    a.Init();
+    a.Dump();//init() function works but does the same thing as reset() func
+
+
 
     if (a == b)//tests the comparison operator
-        cout << "comparison test success" << endl;
+        cout << "a and b have same dimensions\n\n";
     else
-        cout << "comparison test fail" << endl;
+        cout << "a and b have different dimensions\n\n";
 
     
 
     if (a == c)//2nd test for comparsion operator
-        cout << "a and c have same dimensions" << endl;
+        cout << "a and c have same dimensions\n\n";
     else
-        cout << "a and c have different dimensions" << endl;
+        cout << "a and c have different dimensions\n\n";
 
-    c.Init(a);
-    c.Dump();//init(const polygon &p) works
-
-    a.Init();
-    a.Dump();//init() function works but does the same thing as reset() func
 
    
 
     if (d.CheckbottomSide())//cout messages describes the test
-        cout << "With given params(-1,3,-2) the functions fails its description of testing if bottomside is negative" << endl;
+        cout << "With given params(-1,3,-2) the functions fails its description of testing if bottomside is negative\n\n";
     else
-        cout << "With given params(-1,3,-2) the functions fulfills its description of testing if bottomside is negative" << endl;
+        cout << "With given params(-1,3,-2) the functions fulfills its description of testing if bottomside is negative\n\n";
 
 
     if (d.Checkpropieties())//tests if d's dimensions have negative values but it lacks to check if they are equal to zero
-        cout << "Dimensional values are bigger than zero " << endl;
+        cout << "Dimensional values are bigger than zero\n\n ";
     else
-        cout << "Dimensional values are bigger than zero " << endl;
+        cout << "Dimensional values are bigger than zero\n\n";
 
     if (a.Checkpropieties())
-        cout << "A has 0 as its dimensions" << endl;//it checks if one of A's dims is zero but actually they all are
+        cout << "A has 0 as its dimensions\n\n";//it checks if one of A's dims is zero but actually they all are
     else
-        cout << "A does not have 0 as its dimensions" << endl;
+        cout << "A does not have 0 as its dimensions\n\n";
 
   
-    //3 singular tests to see each value individually
+    //3 tests to see each value individually
     printf("%f is e's oblique side value\n\n", e.GetSide());
 
     printf("%f is e's area\n\n", e.Area());
 
-    printf("%f is e's perimeter\n", e.Perimeter());
+    printf("%f is e's perimeter\n\n", e.Perimeter());
 
-    e.WarningMessage("test warning message");
+    e.WarningMessage("test warning message\n\n");
 
-    e.ErrorMessage("test error message");
+    e.ErrorMessage("test error message\n\n");
 
 
 
