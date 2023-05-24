@@ -15,6 +15,7 @@ class IsoTrapezoid : public Polygon
 	/// @{
     IsoTrapezoid();
     IsoTrapezoid(float bottomSide,float height,float topSide);
+    IsoTrapezoid(float tS, float bs);//added for testing purposes-ozan akgul
     IsoTrapezoid(const IsoTrapezoid& other);
     ~IsoTrapezoid();
     /// @}

@@ -20,6 +20,18 @@ IsoTrapezoid::IsoTrapezoid(float bottomSide,float height,float topSide)
  //cout << "constructor test" << endl;
 
 }
+
+
+//adding another constructor for testing purposes- Ozan Akgul
+IsoTrapezoid::IsoTrapezoid(float tS, float bS) 
+{
+    height = 5;
+    topSide = tS;
+    bottomSide = bS;
+    //lacks check for negative or null numbers but it is taken in account in main
+}
+
+
 /// @brief copy constructor 
 /// @param r reference to the object that should be copied 
 IsoTrapezoid::IsoTrapezoid(const IsoTrapezoid& other) 
@@ -51,6 +63,7 @@ bool IsoTrapezoid::operator==(const IsoTrapezoid& r)
     else
         return false;
 }
+
 /// @brief init proprieties to zero value
 void IsoTrapezoid::Init() 
 {
